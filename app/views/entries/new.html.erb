@@ -1,0 +1,28 @@
+<h1>New Entry</h1>
+
+<%= form_with model: @entry do |f| %>
+  <%= f.hidden_field :place_id, value: @place_id %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :posted_on %><br>
+    <%= f.date_field :posted_on %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit "Create Entry" %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to "Back", places_path %>
+</p>
